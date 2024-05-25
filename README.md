@@ -6,5 +6,5 @@ https://sparts-test.netlify.app/
 ![image](https://github.com/kkalyankumar9/sparts/assets/112814583/87e51f0b-bae6-444b-ae96-3e31ebae6f89)
 ## Application start locally
 ```sh
- npm install 
+npm install 
 npm run start
