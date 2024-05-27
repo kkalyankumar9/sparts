@@ -4,8 +4,11 @@ https://sparts-test.netlify.app/
 React.js, Tailwind CSS 
 ## Application screenshots
 ## Desktop view
-![image](https://github.com/kkalyankumar9/sparts/assets/112814583/c37d81f6-666d-48cf-924c-acb67456b2ae)
-![image](https://github.com/kkalyankumar9/sparts/assets/112814583/715190fe-1958-4a4d-9acc-738c2176c6cc)
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/6ee747fa-13b8-499c-83af-27536771d027)
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/883f9ff0-84cb-4335-912c-837524dc7e6a)
+
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/7735860e-bb6e-4361-8ccb-db231f68a091)
+
 ![image](https://github.com/kkalyankumar9/sparts/assets/112814583/87e51f0b-bae6-444b-ae96-3e31ebae6f89)
 ## Mobile View
 ![image](https://github.com/kkalyankumar9/sparts/assets/112814583/9f56ed6e-d84e-42cf-af25-555d2847e3dd)
