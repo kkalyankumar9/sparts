@@ -3,9 +3,15 @@ https://sparts-test.netlify.app/
 ## Tech Stack
 React.js, Tailwind CSS 
 ## Application screenshots
+## Desktop view
 ![image](https://github.com/kkalyankumar9/sparts/assets/112814583/c37d81f6-666d-48cf-924c-acb67456b2ae)
-![image](https://github.com/kkalyankumar9/sparts/assets/112814583/af0a41f4-59ea-47a4-9f03-83ae889c538e)
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/715190fe-1958-4a4d-9acc-738c2176c6cc)
 ![image](https://github.com/kkalyankumar9/sparts/assets/112814583/87e51f0b-bae6-444b-ae96-3e31ebae6f89)
+## Mobile View
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/9f56ed6e-d84e-42cf-af25-555d2847e3dd)
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/577b7705-d71c-4359-86f7-dccc14f92715)
+![image](https://github.com/kkalyankumar9/sparts/assets/112814583/6144e1fc-0355-4a6d-9784-cfbb2899ebf6)
+
 ## Application start locally
 ```sh
 npm install 
