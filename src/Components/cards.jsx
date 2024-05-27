@@ -57,21 +57,21 @@ const Cards = () => {
       <h1 className="text-white text-left text-3xl sm:text-4xl ml-4 md:ml-10 p-2 animate-fadeInOut">
         Explore Our Top <br /> Academies
       </h1>
-      <div className="ml-4 md:ml-10 p-6 flex items-center relative flex-wrap ">
+      <div className=" p-6 flex justify-evenly items-center  flex-wrap ">
         <button
           onClick={handlePrevious}
           disabled={currentPage === 0}
-          className="absolute left-0 z-10 text-white bg-amber-400 p-2 rounded-full  hover:bg-amber-500"
+          className="absolute left-0 z-10 text-white bg-amber-500 p-2 rounded-full ml-4 hover:bg-slate-400"
         >
           <ChevronLeftIcon className="h-5 w-5 text-gray-800" />
         </button>
-        <div className="flex flex-wrap justify-between w-full">
+        <div className="flex flex-wrap justify-evenly w-full">
           {apiData
             .slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
             .map((el) => (
               <div
                 key={el.id}
-                className="bg-white p-4 m-2 rounded-lg shadow-lg flex flex-col justify-top items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-h-1/2 hover:bg-green-100 "
+                className="bg-white p-4 m-2 rounded-lg shadow-lg flex flex-col justify-top items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[460px] hover:bg-green-100 "
               >
                 <img
                   src="https://kidsacademytxaledo.com/wp-content/uploads/bb-plugin/cache/Front-of-Office-Bldng-5-1-20-scaled-landscape-d718edff32127214f640053b4532e9da-.jpg"
@@ -86,7 +86,7 @@ const Cards = () => {
         <button
           onClick={handleNext}
           disabled={(currentPage + 1) * itemsPerPage >= apiData.length}
-          className="absolute right-0 z-10 bg-amber-400 text-white p-2 rounded-full ml-2 hover:bg-amber-500"
+          className="absolute right-0 z-10 bg-amber-500 text-white p-2 rounded-full ml-2 mr-4 hover:bg-slate-400"
         >
           <ChevronRightIcon className="h-5 w-5 text-gray-800" />
         </button>

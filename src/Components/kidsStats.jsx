@@ -81,7 +81,7 @@ const KidsStats = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 1000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentPage]);
@@ -107,11 +107,11 @@ const KidsStats = () => {
       <h1 className="text-amber-400 text-right font-semibold text-3xl md:text-4xl ml-10 p-2">
         Happy Kids <br /> Satisfied Parents!
       </h1>
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 ">
         <button
           onClick={handlePrevious}
           disabled={currentPage === 0}
-          className="absolute left-0 z-10  text-white bg-amber-400 p-2 rounded-full mr-2 hover:bg-amber-500  mt-24"
+          className="absolute left-0 z-10  text-white bg-amber-400 p-2 rounded-full hover:bg-slate-400 mt-24"
         >
           <ChevronLeftIcon className="h-5 w-5 text-gray-800" />
         </button>
@@ -121,7 +121,7 @@ const KidsStats = () => {
           .map((el, i) => (
             <div
               key={i}
-              className="bg-white p-6 flex flex-col justify-between shadow-lg hover:bg-pink-100 transition-transform duration-500 ease-in-out transform border border-transparent hover:border-amber-400 rounded-lg"
+              className="  bg-white p-6 flex flex-col justify-between shadow-lg hover:bg-pink-100 transition-transform duration-500 ease-in-out  rounded-lg "
             >
               <div className="text-left">
                 <p className="font-bold text-xl md:text-2xl text-sky-400">

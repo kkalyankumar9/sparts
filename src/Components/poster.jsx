@@ -34,7 +34,7 @@ const Poster = () => {
             />
           ))}
 
-          <div className="absolute inset-0 flex items-center text-left text-white bg-opacity-50 p-5 rounded-lg font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl ml-4 sm:ml-8 md:ml-12 lg:ml-16">
+          <div className="absolute inset-0 flex items-center text-left text-sky-400 bg-opacity-50 p-5 rounded-lg font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl ml-4 sm:ml-8 md:ml-12 lg:ml-16">
             <p className="animate__animated animate__fadeInLeft transition duration-500 ease-in-out">
               Find the Best <br /> Activity for your <br /> Child!
             </p>
@@ -45,10 +45,10 @@ const Poster = () => {
           </div>
 
           <div className="absolute bottom-6 w-full flex flex-col md:flex-row justify-center py-4">
-            <button className="w-full md:w-64 lg:w-72 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-400 text-white p-3 rounded-full mb-2 md:mb-0 md:mr-2.5 mt-10 hover:bg-orange-500 transition duration-300 ease-in-out">
+            <button className="w-full md:w-64 lg:w-72 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-500 text-white p-3 rounded-full mb-2 md:mb-0 md:mr-2.5 mt-10 hover:bg-sky-500 transition duration-300 ease-in-out">
               For Academies
             </button>
-            <button className="w-full md:w-80 lg:w-96 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-400 text-white p-3 rounded-full mt-10 hover:bg-orange-500 transition duration-300 ease-in-out">
+            <button className="w-full md:w-80 lg:w-96 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-500 text-white p-3 rounded-full mt-10 hover:bg-sky-500 transition duration-300 ease-in-out">
               SpArts in your home
             </button>
           </div>
