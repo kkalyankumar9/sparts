@@ -17,37 +17,38 @@ const Poster = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 2000);
     return () => clearInterval(intervalId);
-  }, [images]);
+  }, []);
 
   return (
-    <div className="flex justify-center items-center h-1/3">
-      <div className="w-full h-screen max-w-full rounded-lg overflow-hidden shadow-lg">
+    <div className="flex justify-center items-center h-full">
+      <div className="w-full h-screen max-w-full rounded-lg overflow-hidden shadow-lg relative">
         <div className="relative w-full h-full">
           {images.map((imageUrl, i) => (
             <img
               key={i}
               src={imageUrl}
-              alt="err"
-              className={
-                i === currentImageIndex
-                  ? "block w-full h-full object-cover"
-                  : "hidden"
-              }
+              alt={`Slide ${i}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                i === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
             />
           ))}
 
-          <p className="absolute inset-0 flex items-center text-left text-white bg-opacity-50 p-5 rounded-lg font-bold text-5xl ml-11">
-            Find the Best <br /> Activity for your <br /> Child!
-            <span className="ml-3 mt-2 rounded-full bg-sky-400">
-              <ChevronRightIcon className="h-8 w-8 text-white" />
-            </span>
-          </p>
+          <div className="absolute inset-0 flex items-center text-left text-white bg-opacity-50 p-5 rounded-lg font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl ml-4 sm:ml-8 md:ml-12 lg:ml-16">
+            <p className="animate__animated animate__fadeInLeft transition duration-500 ease-in-out">
+              Find the Best <br /> Activity for your <br /> Child!
+            </p>
 
-          <div className="absolute bottom-0 w-full flex flex-col md:flex-row justify-center py-4">
-            <button className="w-full md:w-64 text-lg sm:text-xl md:text-2xl bg-orange-400 text-white p-3 rounded-full mb-2 md:mb-0 md:mr-2.5 mt-10">
+            <span className="ml-3 mt-2 rounded-full bg-sky-400 hover:bg-sky-500 transition duration-300 ease-in-out">
+              <ChevronRightIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-white" />
+            </span>
+          </div>
+
+          <div className="absolute bottom-6 w-full flex flex-col md:flex-row justify-center py-4">
+            <button className="w-full md:w-64 lg:w-72 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-400 text-white p-3 rounded-full mb-2 md:mb-0 md:mr-2.5 mt-10 hover:bg-orange-500 transition duration-300 ease-in-out">
               For Academies
             </button>
-            <button className="w-full md:w-80 text-lg sm:text-xl md:text-2xl bg-orange-400 text-white p-3 rounded-full mt-10">
+            <button className="w-full md:w-80 lg:w-96 text-lg sm:text-xl md:text-2xl lg:text-3xl bg-orange-400 text-white p-3 rounded-full mt-10 hover:bg-orange-500 transition duration-300 ease-in-out">
               SpArts in your home
             </button>
           </div>

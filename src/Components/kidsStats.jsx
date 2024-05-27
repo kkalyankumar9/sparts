@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
 const data = [
@@ -78,15 +78,27 @@ const KidsStats = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 2;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentPage]);
+
   const handleNext = () => {
     if ((currentPage + 1) * itemsPerPage < data.length) {
       setCurrentPage(currentPage + 1);
+    } else {
+      setCurrentPage(0);
     }
   };
 
   const handlePrevious = () => {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 1);
+    } else {
+      setCurrentPage(Math.ceil(data.length / itemsPerPage) - 1);
     }
   };
 
@@ -99,9 +111,9 @@ const KidsStats = () => {
         <button
           onClick={handlePrevious}
           disabled={currentPage === 0}
-          className="absolute left-0 text-white bg-amber-400 p-2 rounded-full hover:bg-slate-400 mt-24"
+          className="absolute left-0 z-10  text-white bg-amber-400 p-2 rounded-full mr-2 hover:bg-amber-500  mt-24"
         >
-          <ChevronLeftIcon className="h-5 w-5 text-gray-500" />
+          <ChevronLeftIcon className="h-5 w-5 text-gray-800" />
         </button>
 
         {data
@@ -109,7 +121,7 @@ const KidsStats = () => {
           .map((el, i) => (
             <div
               key={i}
-              className="bg-white p-6 flex flex-col justify-between shadow-lg hover:bg-green-50"
+              className="bg-white p-6 flex flex-col justify-between shadow-lg hover:bg-pink-100 transition-transform duration-500 ease-in-out transform border border-transparent hover:border-amber-400 rounded-lg"
             >
               <div className="text-left">
                 <p className="font-bold text-xl md:text-2xl text-sky-400">
@@ -121,7 +133,7 @@ const KidsStats = () => {
                 <img
                   src={el.image}
                   alt="error"
-                  className="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full"
+                  className="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
                 />
               </div>
             </div>
@@ -129,11 +141,24 @@ const KidsStats = () => {
 
         <button
           onClick={handleNext}
-          disabled={(currentPage + 1) * itemsPerPage >= data.length}
           className="absolute right-0 text-white bg-amber-400 p-2 rounded-full mt-24 hover:bg-slate-400"
         >
-          <ChevronRightIcon className="h-5 w-5 text-gray-500" />
+          <ChevronRightIcon className="h-5 w-5 text-gray-800" />
         </button>
+      </div>
+      {/* Pagination Dots */}
+      <div className="flex justify-center mt-4">
+        {Array(Math.ceil(data.length / itemsPerPage))
+          .fill()
+          .map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 mx-1 rounded-full ${
+                currentPage === index ? "bg-amber-400" : "bg-gray-300"
+              }`}
+              onClick={() => setCurrentPage(index)}
+            />
+          ))}
       </div>
     </div>
   );
